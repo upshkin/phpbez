@@ -6,6 +6,13 @@ if (!class_exists('Controller')) {
 
 class Controllers_Test extends Controller {
 
+    public function initialize(array $params = array()) {
+        if (empty($params)) {
+            $this->redirect('/test/');
+        }
+        return true;
+    }
+
     /**
      * Основной рабочий метод
      *

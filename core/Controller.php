@@ -24,4 +24,14 @@ class Controller {
         return "Hello World!";
     }
 
+    public function initialize(array $params = array()) {
+
+        return true;
+    }
+
+    public function redirect($url = '/') {
+        header("Location: {$url}");
+        exit();
+    }
+
 }

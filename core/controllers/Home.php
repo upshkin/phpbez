@@ -6,6 +6,13 @@ if (!class_exists('Controller')) {
 
 class Controllers_Home extends Controller {
 
+    public function initialize(array $params = array()) {
+        if (!empty($_REQUEST['q'])) {
+            $this->redirect('/');
+        }
+        return true;
+    }
+
     /**
      * Основной рабочий метод
      *
