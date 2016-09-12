@@ -1,19 +1,10 @@
 <?php
 
-class Controllers_Test {
-    /** @var Core $core */
-    public $core;
+if (!class_exists('Controller')) {
+    require_once dirname(dirname(__FILE__)) . '/Controller.php';
+}
 
-
-    /**
-     * Конструктор класса, требует передачи Core
-     *
-     * @param Core $core
-     */
-    function __construct(Core $core) {
-        $this->core = $core;
-    }
-
+class Controllers_Test extends Controller {
 
     /**
      * Основной рабочий метод
